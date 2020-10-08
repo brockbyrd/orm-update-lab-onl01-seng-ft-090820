@@ -16,6 +16,8 @@ class Student
     sql = <<-SQL
       CREATE TABLE students;
     SQL
+
+    DB[:conn].execute(sql)
   end
 
 
