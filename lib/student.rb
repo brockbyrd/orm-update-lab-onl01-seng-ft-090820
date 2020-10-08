@@ -53,6 +53,9 @@ class Student
   end
 
   def self.new_from_db
+    sql = <<-SQL
+
+    SQL
 
   end
 
@@ -62,6 +65,8 @@ class Student
       FROM students
       WHERE name = ?
     SQL
+
+    DB[:conn].execute(sql, name)
   end
 
   def update
